@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description"
+        content="Jeremy Erik Leong is a Front End Developer and designer that based in Kuala Lumpur, Malaysia" />
+    <meta name="keywords"/>
+    <meta name="author" content="Anuj Thakur" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anuj Thakur</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="scss/style.scss">
+</head>
+
+<body>
+    <div id="loader">
+        <span class="dots"></span>
+        <span class="dots"></span>
+        <span class="dots"></span>
+    </div>
+    <main id="wrapper">
+        <header id="header">
+            <div class="header container">
+                <nav class="nav-bar">
+                    <div class="logo">
+                        <a href="#" class="no-select logo"><img src="img/logo.png" alt="anuj's logo"></a>
+                    </div>
+                    <div class="nav-list">
+                        <label id="hamburger" class="no-select">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+                        <ul class="mobile-menu">
+                            <li><a href="#about" data-after="About" class="no-select">About</a></li>
+                            <li><a href="https://drive.google.com/file/d/1_CWKO6vzI3zK2hU2XJyD877xhBvNOq6r/view?usp=share_link" target="_blank" rel="noreferrer">Resume</a></li>
+                            <li><a href="#work" data-after="work" class="no-select">Work</a></li>
+                            <li><a href="#contact" data-after="contact" class="no-select">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <section id="hero">
+            <div class="hero container fadein">
+                <div>
+                    <h3>Hello, my name is</h3>
+                    <h1>Anuj Thakur.</h1>
+                    <p>I build <b>Android Apps</b> and <b>Interactive Websites</b> that run across platforms and devices.</p>
+                    <a href="#about" class="no-select"><svg class="mouse stagger1" width="20" height="40"
+                            viewBox="0 0 40 77">
+                            <g id="scroll" transform="translate(-253 -787)">
+                                <g id="Rectangle_12" data-name="Rectangle 12" transform="translate(253 787)" fill="none"
+                                    stroke="#5d9ce2" stroke-width="4">
+                                    <rect width="40" height="77" rx="20" stroke="none" />
+                                    <rect x="2" y="2" width="36" height="73" rx="18" fill="none" />
+                                </g>
+                                <circle class="scroll" id="Ellipse_1" data-name="Ellipse 1" cx="11" cy="11" r="11"
+                                    transform="translate(262 798)" fill="#5d9ce2" />
+                            </g>
+                        </svg></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="about container reveal">
+                <div class="col-left">
+                    <h2 class="section-title">About Me.</h2>
+                    <p class="section-paragraph">Hello! I am a developer based in Chandigarh, India. I love programming and enjoy
+                        building things that run on the Internet.
+                    </p>
+                    <p class="section-paragraph">Here are a few technologies I've been working with recently:
+                    <ul>
+                        <li>Kotlin</li>
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>Solidity</li>
+                        <li>Ethereum.js</li>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>Next.js</li>
+                        <li>React.js</li>
+                        <li>SQL</li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="col-right">
+                    <div class="about-image">
+                        <img src="img/anuj.jpg" alt="my-profile-pic">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work">
+            <div class="work container reveal">
+                <div class="work-info">
+                    <h2 class="section-title">Projects I've Built.</h2>
+                    <p class="section-paragraph">Here's a selection of my projects for brushing up my skills. For
+                        more stuff, kindly check out my
+                        <a href="https://github.com/anuj-thakur-513?tab=repositories" target="_blank" class="no-select"><b>repositories</b></a>.
+                    </p>
+                </div>
+                <div class="work-details">
+                    <div class="card">
+                        <div class="icon"><i class="far fa-folder fa-2x"></i>
+                            <div class="link">
+                                <a href="https://github.com/anuj-thakur-513/NEWS-Wiki" target="_blank"><i
+                                        class="fab fa-github"></i></a>
+
+                                <a href="https://play.google.com/store/apps/details?id=com.project.news_wiki" target="_blank"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <h2>NEWS Wiki</h2>
+                        <p>A simple NEWS android application which fetches the data from API. Uses glide library to fetch and load images</p>
+                        <ul class="tech-stack">
+                            <li>JAVA</li>
+                            <li>XML</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon"><i class="far fa-folder fa-2x"></i>
+                            <div class="link">
+                                <a href="https://github.com/anuj-thakur-513/Task-List-App" target="_blank"><i
+                                        class="fab fa-github"></i></a>
+
+                                <a href="https://play.google.com/store/apps/details?id=com.project.tasklist" target="_blank"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <h2>Task List</h2>
+                        <p>A task noting app built on MVVM architecture. Uses SQLite with ROOM to store data</p>
+                        <ul class="tech-stack">
+                            <li>KOTLIN</li>
+                            <li>XML</li>
+                            <li>SQLite (ROOM)</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon"><i class="far fa-folder fa-2x"></i>
+                            <div class="link">
+                                <a href="https://github.com/anuj-thakur-513/StopWatch-App" target="_blank"><i
+                                        class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h2>Stopwatch App</h2>
+                        <p>A simple android Stopwatch application which uses Dagger-Hilt, Bound and Foreground Service.</p>
+                        <ul class="tech-stack">
+                            <li>Kotlin</li>
+                            <li>Jetpack Compose</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon"><i class="far fa-folder fa-2x"></i>
+                            <div class="link">
+                                <a href="https://github.com/anuj-thakur-513/NFT-MarketPlace" target="_blank"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="https://anuj-thakur-513.github.io/NFT-MarketPlace/" target="_blank"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <h2>NFT Zone</h2>
+                        <p>Users can mint upto 20 NFTs using Onigiri crypto coin (created by me). It also has whitelisting feature</p>
+                        <ul class="tech-stack">
+                            <li>Solidity</li>
+                            <li>Next.js</li>
+                            <li>Mantle Testnet</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon"><i class="far fa-folder fa-2x"></i>
+                            <div class="link">
+                                <a href="https://github.com/anuj-thakur-513/Lion-or-Tiger-Game" target="_blank"><i
+                                    class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h2>Lion or Tiger Game</h2>
+                        <p>An android tic-tac-toe game with tiger and lion instead of cross and circle. It uses different animations</p>
+                        <ul class="tech-stack">
+                            <li>Java</li>
+                            <li>XML</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon"><i class="far fa-folder fa-2x"></i>
+                            <div class="link">
+                                <a href="https://github.com/anuj-thakur-513/Tinder-Clone" target="_blank"><i
+                                        class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h2>Tinder Clone</h2>
+                        <p>An android clone of Tinder which uses Firebase as backend service and users can match with others and chat with matched user.</p>
+                        <ul class="tech-stack">
+                            <li>Kotlin</li>
+                            <li>XML</li>
+                            <li>Firebase</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="btn">
+        </section>
+
+        <section id="contact">
+            <div class="contact container reveal">
+                <div class="contact-info">
+                    <h2 class="section-title">Get In Touch.</h2>
+                    <p class="section-paragraph">Have an exciting project where we can work together? Or just want to
+                        say
+                        hi, do send me a message and let's chat.</p>
+                </div>
+                <form class="contact-forms" name="contact" method="POST" data-netlify="true">
+                    <div class="input-box">
+                        <input type="text" name="name" autocomplete="off" spellcheck="false" required>
+                        <label>Name:</label>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" name="email" autocomplete="off" spellcheck="false" required>
+                        <label>Email:</label>
+                    </div>
+
+                    <div class="input-box">
+                        <textarea name="message" id="" cols="30" rows="10" autocomplete="off" required></textarea>
+                        <label>Message:</label>
+                    </div>
+
+                    <div class="btn">
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div class="footer">
+                <ul class="social-icons">
+                    <li><a href="https://github.com/anuj-thakur-513" target=anuj-thakur-513"_blank"><i class="fab fa-github fa-lg"></i></a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/anujthakur-s19/" target="_blank"><i
+                                class="fab fa-linkedin fa-lg"></i></a>
+                    </li>
+                    <li><a href="https://twitter.com/anujthakur05" target="_blank"><i
+                                class="fab fa-twitter fa-lg"></i></a>
+                    </li>
+                </ul>
+                <p></span> Anuj Thakur</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
