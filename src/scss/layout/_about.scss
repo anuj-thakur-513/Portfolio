@@ -34,7 +34,7 @@
         @include widthHeight(200px, 200px);
 
         @include breakpoint(medium) {
-            @include widthHeight(400px, 400px);
+            @include widthHeight(350px, 350px);
             padding: 2em;
         }
 
