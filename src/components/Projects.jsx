@@ -32,13 +32,17 @@ const ProjectContainer = styled(motion.div)`
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 `;
 
 const ProjectCard = styled(motion.div)`
   background: rgba(37, 39, 77, 0.75);
   backdrop-filter: blur(10px);
   border-radius: 12px;
-  width: 400px;
+  width: calc(50% - 1rem);
+  min-width: 300px;
+  max-width: 550px;
   padding: 1.5rem;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
   overflow: hidden;
@@ -46,6 +50,10 @@ const ProjectCard = styled(motion.div)`
   transition: transform 0.1s ease;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const ProjectContent = styled.div`
