@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FaGithub, FaGlobe } from "react-icons/fa";
+import { projectList } from "../constants";
 
 const Section = styled(motion.section)`
   padding: 4rem 2rem;
@@ -51,24 +52,22 @@ const ProjectContent = styled.div`
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  overflow: hidden; // Prevent content from overflowing
+  overflow: hidden;
 `;
 
-const ProjectDescription = styled.p`
-  line-height: 1.6;
-  color: #e0e0e0;
-  margin-bottom: 1.5rem;
-  overflow-y: auto;
-  flex-grow: 1;
-  padding-right: 5px; // Add some padding for the scrollbar
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem; // Add some space above the buttons
 `;
 
 const ProjectImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 120px; // Fixed height for image container
   margin-bottom: 1rem;
+  height: 100px;
 `;
 
 const ProjectImage = styled.img`
@@ -80,16 +79,14 @@ const ProjectImage = styled.img`
 
 const ProjectTitle = styled.h3`
   color: #ffffff;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.25rem; /* Adjusted font size for better visual balance */
+  margin-bottom: 0.75rem;
   font-weight: 600;
 `;
 
-const ButtonContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem; // Add some space above the buttons
+const ProjectDescription = styled.p`
+  color: #e0e0e0;
+  margin-bottom: 0.75rem;
 `;
 
 const ProjectButton = styled.a`
@@ -114,6 +111,36 @@ const ProjectButton = styled.a`
   svg {
     margin-right: 0.5rem;
   }
+`;
+
+const TechStackSection = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+`;
+
+const TechStackLabel = styled.span`
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #a0a0a0;
+  margin-right: 0.75rem;
+  white-space: nowrap;
+`;
+
+const TechStackContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  flex-grow: 1;
+`;
+
+const TechTag = styled.span`
+  background: rgba(123, 104, 238, 0.2);
+  color: #7b68ee;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
 `;
 
 const Projects = () => {
@@ -148,58 +175,6 @@ const Projects = () => {
     e.currentTarget.style.transform =
       "perspective(2000px) rotateX(0) rotateY(0)";
   };
-
-  const projectList = [
-    {
-      title: "Attendance Tracker",
-      description:
-        "An attendance tracking system with Google OAuth for students so they know what's their attendance percentage. Users can access their time table and get to know how many classes can be left without affecting their attendance and how many more classes are to be attended.",
-      link: "https://github.com/anuj-thakur-513/attendance-tracker-frontend",
-      deployedLink: "https://myattendance-tracker.netlify.app/",
-      image: "https://cdn-icons-png.flaticon.com/512/3589/3589030.png",
-    },
-    {
-      title: "YouTube Downloader",
-      description:
-        "A CLI tool to download videos and playlists using the youtube link in highest quality in one go. Why? Because there's no tool live on the internet to download whole YouTube playlist in one go.",
-      link: "https://github.com/anuj-thakur-513/youtube-downloader",
-      image:
-        "https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_youtube-512.png",
-    },
-    {
-      title: "ScaleChat Server",
-      description:
-        "A scalable chat application server made using Redis & Apache Kafka to make websockets scalable and reduce DB operations. It utilizes Redis PUB/SUB for broadcasting messages to different websockets.",
-      link: "https://github.com/anuj-thakur-513/ScaleChat",
-      image:
-        "https://img.freepik.com/premium-vector/speech-bubbles-line-coloured-vector-icon-chat-app-icon_787461-2127.jpg",
-    },
-    {
-      title: "URL Shortener Discord Bot",
-      description:
-        "A URL shortener backend service made with 3RE architecture with JWT based authentication. Users can view analytics of their URL. A discord bot integrated with this API service to shorten the URL in one go.",
-      image:
-        "https://images.golinks.io/blog/wp-content/uploads/2023/08/28145505/Blog-Header%402x-3.png",
-      link: "https://github.com/anuj-thakur-513/URL-Shortener-Discord-Bot",
-      deployedLink: "https://discord.gg/mGtxT4K5pE",
-    },
-    {
-      title: "GitHub CLI",
-      description:
-        "Create any repo with desired visibility and description. A handy tool so that you don't have to go to github again and again to create new repos for your project.",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWiTtItZboRmxsdPVbkWdypw8bs81jsbI9vg&s",
-      link: "https://github.com/anuj-thakur-513/GitHub-CLI",
-    },
-    {
-      title: "URL Expander CLI",
-      description:
-        "A CLI based short URL expander because there are tons of malicious links circulating on the internet and we don't wanna visit some URL which doesn't even specify about the company but is just a short URL.",
-      link: "https://github.com/anuj-thakur-513/CLI-URL-Expander",
-      image:
-        "https://cdn3d.iconscout.com/3d/premium/thumb/external-link-3d-icon-download-in-png-blend-fbx-gltf-file-formats--maximize-url-expand-user-interface-pack-icons-7358150.png?f=webp",
-    },
-  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -249,6 +224,16 @@ const Projects = () => {
               </ProjectImageContainer>
               <ProjectTitle>{project.title}</ProjectTitle>
               <ProjectDescription>{project.description}</ProjectDescription>
+              {project.techStack && (
+                <TechStackSection>
+                  <TechStackLabel>Tech Stack:</TechStackLabel>
+                  <TechStackContainer>
+                    {project.techStack.map((tech, techIndex) => (
+                      <TechTag key={techIndex}>{tech}</TechTag>
+                    ))}
+                  </TechStackContainer>
+                </TechStackSection>
+              )}
             </ProjectContent>
             <ButtonContainer>
               {project.deployedLink && (
