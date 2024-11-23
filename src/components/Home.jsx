@@ -1,121 +1,341 @@
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
-import styled from "styled-components";
+import { FaLinkedin, FaTwitter, FaGithub, FaEnvelope } from "react-icons/fa";
+import Badge from "./Badge";
+import VerticalLine from "./VerticalLine";
 
 const Home = () => {
-    const controlsText = useAnimation();
-    const controlsAvatar = useAnimation();
+  return (
+    <div className="flex justify-center">
+      <main className="mt-8 flex-col items-center">
+        {/* Hero Section */}
+        <section id="about" className="flex flex-col md:flex-row items-center md:items-start gap-8">
+          <div className="relative cursor-pointer">
+            <div className="w-28 h-28 bg-white rounded-full absolute inset-0"></div>
+            <img
+              src="/avatar.png"
+              alt="Profile"
+              className="w-28 h-28 rounded-full scale-90 hover:scale-100 duration-150 relative z-10"
+            />
+          </div>
+          <div>
+            <h1 className="text-xl font-bold flex items-center gap-2">
+              Hey 👋, I&apos;m Anuj Thakur
+            </h1>
+            <p className="text-sm font-semibold text-black dark:text-white mt-2">
+              a full-stack software engineer, from India.
+            </p>
+            <div className="flex gap-4 mt-4">
+              <a
+                href="https://www.linkedin.com/in/anuj-thakur-s19/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-400 duration-300"
+              >
+                <FaLinkedin className="w-5 h-5" />
+                <span className="sr-only">LinkedIn</span>
+              </a>
+              <a
+                href="https://x.com/anujthakur05"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-400 duration-300"
+              >
+                <FaTwitter className="w-5 h-5" />
+                <span className="sr-only">Twitter</span>
+              </a>
+              <a
+                href="https://github.com/anuj-thakur-513"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-400 duration-300"
+              >
+                <FaGithub className="w-5 h-5" />
+                <span className="sr-only">GitHub</span>
+              </a>
+              <a
+                href="mailto:anujthakur0103@gmail.com"
+                className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-400 duration-300"
+              >
+                <FaEnvelope className="w-5 h-5" />
+                <span className="sr-only">Email</span>
+              </a>
+            </div>
+          </div>
+        </section>
 
-    const { ref: textRef, inView: textInView } = useInView({
-        triggerOnce: false,
-    });
-    const { ref: avatarRef, inView: avatarInView } = useInView({
-        triggerOnce: false,
-    });
+        {/* About Section */}
+        <section id="about" className="mt-10">
+          <h2 className="text-l font-semibold mb-4">about me.</h2>
+          <p className="text-black dark:text-white max-w-2xl text-sm">
+            I&apos;m a passionate full-stack developer who learns and transforms complex problems
+            into simple, beautiful, and intuitive solutions through development and design.
+          </p>
+          <div className="mt-4 p-4 bg-gray-100 dark:bg-gray-900 rounded-lg max-w-2xl">
+            <p className="text-sm text-black dark:text-white">
+              I&apos;m open to collaborate with talented individuals and contribute to impactful
+              projects. If you&apos;d like to learn more about my work or discuss potential
+              opportunities, feel free to reach out!
+            </p>
+            <div className="mt-4 flex gap-4">
+              <button
+                className="px-3 py-2 bg-black text-white text-sm rounded-md"
+                onClick={() => {
+                  window.open("https://x.com/anujthakur05", "_blank");
+                }}
+              >
+                Drop message on X
+              </button>
+              <button
+                className="py-2 group text-sm"
+                onClick={() => {
+                  window.open(
+                    "https://drive.google.com/file/d/1JmIc5tXjA9TUAZSrU-vK8mCGMCWAkMsD/view?usp=drive_link",
+                    "_blank"
+                  );
+                }}
+              >
+                Resume <span className="group-hover:ml-1 transition-all duration-300">↗</span>
+              </button>
+            </div>
+          </div>
+        </section>
 
-    useEffect(() => {
-        if (textInView) {
-            controlsText.start({ opacity: 1, x: 0 });
-        } else {
-            controlsText.start({ opacity: 0, x: -30 });
-        }
-    }, [textInView, controlsText]);
+        {/* Work Experience Section */}
+        <section id="work-experience" className="mt-10">
+          <h2 className="text-l font-semibold mb-4">work experience.</h2>
+          <div className="space-y-8 max-w-2xl">
+            <div className="relative flex items-start group">
+              <VerticalLine />
+              <div className="ml-4">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <p className="text-md font-bold">Software Engineer</p>
+                    <a
+                      href="https://www.mathongo.com/"
+                      className="text-xs text-black dark:text-white"
+                    >
+                      at <span className="underline">MathonGo</span>
+                    </a>
+                  </div>
+                  <span className="text-xs font-semibold text-black dark:text-white">
+                    jun, 2024 - present
+                  </span>
+                </div>
+                <p className="mt-2 text-sm text-black dark:text-white">
+                  Optimized Redis to resolve memory leaks, reducing storage usage from 12GB to
+                  700MB. Integrated Webengage for marketing analytics and notifications, developed a
+                  Journey Tracer microservice to handle 10k+ test requests concurrently, and
+                  implemented a Freemium functionality, boosting payments by 10%. Additionally,
+                  designed and implemented a percentile prediction feature from scratch for various
+                  tests like JEE Mains and Advanced.
+                </p>
+              </div>
+            </div>
 
-    useEffect(() => {
-        if (avatarInView) {
-            controlsAvatar.start({ opacity: 1, scale: 1.0 });
-        } else {
-            controlsAvatar.start({ opacity: 0, scale: 0.5 });
-        }
-    }, [avatarInView, controlsAvatar]);
+            <div className="relative flex items-start group">
+              <VerticalLine />
+              <div className="ml-4">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h5 className="font-medium">Data Analyst Intern</h5>
+                    <a
+                      href="https://www.scaler.com/"
+                      className="text-xs text-black dark:text-white"
+                    >
+                      at <span className="underline">Scaler</span>
+                    </a>
+                  </div>
+                  <span className="text-xs font-semibold text-black dark:text-white">
+                    jun, 2023 - jun, 2024
+                  </span>
+                </div>
+                <p className="mt-2 text-sm text-black dark:text-white">
+                  Developed an API for alumni filters as a sentry, increasing engagement by 20%.
+                  Enhanced query performance on Redshift by 2% through optimization, reducing server
+                  load. Created a Python automation script to streamline Key Result (KR) reporting,
+                  saving 10 hours per month and improving metric accuracy. Led the development of
+                  comprehensive dashboards for Scaler School of Technology, reducing the Sales
+                  Team&apos;s manual workload by 5% through automation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-    return (
-        <HomeContainer id="home">
-            <Content>
-                <AnimatedText
-                    ref={textRef}
-                    animate={controlsText}
-                    initial={{ opacity: 0, x: -30 }}
-                    transition={{ duration: 1, type: "spring", damping: 5 }}
-                >
-                    <h1>Welcome to my Portfolio</h1>
-                    <p>
-                        👋 Hi, I&apos;m Anuj Thakur, a passionate Software Engineer at a dynamic startup. I
-                        thrive on solving complex problems and building innovative solutions that make a
-                        difference. I&apos;m mainly Backend & Devops focused with some knowledge of Frontend
-                        too. Explore my portfolio to see the exciting projects I&apos;ve worked on, my diverse
-                        skill set, and what drives my love for technology and continuous learning.
+        {/* Projects Section */}
+        <section id="projects" className="mt-10">
+          <h2 className="text-l font-semibold mb-4">projects.</h2>
+          <div className="space-y-8 max-w-2xl">
+            {/* Project 1 */}
+            <div className="relative flex items-start group">
+              <VerticalLine />
+              <div className="ml-4">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <p className="text-md font-bold">
+                      Scale-Chat [Backend]
+                      <Badge text="📦 Completed" />
                     </p>
-                </AnimatedText>
-            </Content>
-            <AvatarContainer
-                ref={avatarRef}
-                animate={controlsAvatar}
-                initial={{ opacity: 0, scale: 0.9 }}
-                transition={{ type: "spring", damping: 10 }}
-            >
-                <Avatar src="/3d-avatar.png" alt="My Avatar" />
-            </AvatarContainer>
-        </HomeContainer>
-    );
+                    <p className="text-xs font-semibold mt-1">
+                      <strong>Tech Stack: </strong> node.js, express, postgreSQL, redis, kafka
+                    </p>
+                  </div>
+                  <div className="flex gap-4">
+                    <a
+                      href="https://github.com/anuj-thakur-513/ScaleChat"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-black dark:text-white hover:scale-105 duration-150"
+                    >
+                      source code ↗
+                    </a>
+                  </div>
+                </div>
+                <ul className="mt-2 space-y-2 text-sm text-black dark:text-white list-disc pl-4">
+                  <li>
+                    Implemented JWT-based authentication to ensure secure access to chat routes.
+                  </li>
+                  <li>
+                    Leveraged Redis Pub/Sub model to efficiently scale WebSocket connections to
+                    handle 1000+ users.
+                  </li>
+                  <li>
+                    Integrated Apache Kafka to optimize database write operations by 25% - 30%.
+                  </li>
+                  <li>
+                    Set up Cron Job to automate the deletion of messages from Redis once they are
+                    pushed to the database.
+                  </li>
+                  <li>
+                    Designed and implemented a microservices-oriented architecture, enhancing
+                    scalability and maintainability by decoupling services for Redis and Kafka.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            {/* Project 2 */}
+            <div className="relative flex items-start group">
+              <VerticalLine />
+              <div className="ml-4">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <p className="text-md font-bold">
+                      Password Manager
+                      <Badge text="📦 Completed" />
+                    </p>
+                    <p className="text-xs font-semibold mt-1">
+                      <strong>Tech Stack: </strong> react.js, express, mongoDb, redis, AWS, NGINX
+                    </p>
+                  </div>
+                  <div className="flex gap-4">
+                    <a
+                      href="https://password-manager.anuj-thakur.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm group1 text-black dark:text-white hover:scale-105 duration-150"
+                    >
+                      live preview ↗
+                    </a>
+                    <a
+                      href="https://github.com/anuj-thakur-513/password-manager"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-black dark:text-white hover:scale-105 duration-150"
+                    >
+                      source code ↗
+                    </a>
+                  </div>
+                </div>
+                <ul className="mt-2 space-y-2 text-sm text-black dark:text-white list-disc pl-4">
+                  <li>
+                    A full-fledged password manager which stores passwords using AES encryption.
+                  </li>
+                  <li>
+                    Integrated refresh token functionality to automatically update access tokens
+                    upon expiration, ensuring continuous service access.
+                  </li>
+                  <li>
+                    Integrated OTP confirmation for creating accounts and resetting passwords to
+                    enhance security and prevent spam accounts creation.
+                  </li>
+                  <li>
+                    Created a deployment pipeline using github actions which automatically deploys
+                    to the EC2 instance. Used NGINX as a reverse-proxy server for hosting
+                  </li>
+                </ul>
+              </div>
+            </div>
+            {/* Project 3 */}
+            <div className="relative flex items-start group">
+              <VerticalLine />
+              <div className="ml-4">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <p className="text-md font-bold">
+                      Deployment CLI Tool
+                      <Badge text="📦 Completed" />
+                    </p>
+                    <p className="text-xs font-semibold mt-1">
+                      <strong>Tech Stack: </strong> node.js, AWS, NGINX
+                    </p>
+                  </div>
+                  <div className="flex gap-4">
+                    <a
+                      href="https://github.com/anuj-thakur-513/deploy-nodejs-cli"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-black dark:text-white hover:scale-105 duration-150"
+                    >
+                      source code ↗
+                    </a>
+                  </div>
+                </div>
+                <ul className="mt-2 space-y-2 text-sm text-black dark:text-white list-disc pl-4">
+                  <li>
+                    A CLI tool to deploy projects directly to a new or already existing EC2
+                    instance.
+                  </li>
+                  <li>
+                    Deploys nodejs backends and reactjs frontends (both TS & JS) directly without
+                    any hassle with just one command.
+                  </li>
+                  <li>
+                    Uses NGINX as reverse proxy server to deploy frontends which can be accessed on
+                    port 80 directly.
+                  </li>
+                  <li>
+                    Created a deployment pipeline using github actions which automatically deploys
+                    to the EC2 instance.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Skills Section */}
+        <section id="skills" className="mt-10">
+          <h2 className="text-l font-semibold mb-4">skills.</h2>
+          <div>
+            <Badge text="javascript" />
+            <Badge text="typescript" />
+            <Badge text="java" />
+            <Badge text="python" />
+            <Badge text="react.js" />
+            <Badge text="node.js" />
+            <Badge text="express.js" />
+            <Badge text="mongoDb" />
+            <Badge text="redis" />
+            <Badge text="kafka" />
+            <Badge text="docker" />
+          </div>
+          <div className="mt-1">
+            <Badge text="AWS" />
+            <Badge text="NGINX" />
+            <Badge text="github actions" />
+          </div>
+        </section>
+      </main>
+    </div>
+  );
 };
-
-const HomeContainer = styled.section`
-    background-color: #1a1a2e;
-    color: #e0e0e0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 100vh;
-    padding: 5rem;
-    overflow: hidden;
-
-    @media (max-width: 768px) {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-`;
-
-const Content = styled.div`
-    flex: 1;
-    max-width: 600px;
-    padding-right: 2rem;
-
-    @media (max-width: 768px) {
-        padding-right: 0;
-        margin-top: 2rem;
-    }
-`;
-
-const AnimatedText = styled(motion.div)`
-    will-change: opacity, transform;
-
-    h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        color: #7b68ee;
-    }
-
-    p {
-        font-size: 1.2rem;
-        line-height: 1.6;
-        margin-bottom: 1rem;
-    }
-`;
-
-const AvatarContainer = styled(motion.div)`
-    will-change: opacity, transform;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`;
-
-const Avatar = styled.img`
-    object-fit: cover;
-    width: 60%;
-    height: 60%;
-`;
 
 export default Home;
