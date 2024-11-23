@@ -173,7 +173,9 @@ const Home = () => {
                   <div>
                     <p className="text-md font-bold">
                       Scale-Chat [Backend]
-                      <Badge text="📦 Completed" />
+                      <span className="ml-2">
+                        <Badge text="📦 Completed" />
+                      </span>
                     </p>
                     <p className="text-xs font-semibold mt-1">
                       <strong>Tech Stack: </strong> node.js, express, postgreSQL, redis, kafka
@@ -220,7 +222,9 @@ const Home = () => {
                   <div>
                     <p className="text-md font-bold">
                       Password Manager
-                      <Badge text="📦 Completed" />
+                      <span className="ml-2">
+                        <Badge text="📦 Completed" />
+                      </span>
                     </p>
                     <p className="text-xs font-semibold mt-1">
                       <strong>Tech Stack: </strong> react.js, express, mongoDb, redis, AWS, NGINX
@@ -272,7 +276,9 @@ const Home = () => {
                   <div>
                     <p className="text-md font-bold">
                       Deployment CLI Tool
-                      <Badge text="📦 Completed" />
+                      <span className="ml-2">
+                        <Badge text="📦 Completed" />
+                      </span>
                     </p>
                     <p className="text-xs font-semibold mt-1">
                       <strong>Tech Stack: </strong> node.js, AWS, NGINX
@@ -313,24 +319,30 @@ const Home = () => {
         </section>
         {/* Skills Section */}
         <section id="skills" className="mt-10">
-          <h2 className="text-l font-semibold mb-4">skills.</h2>
-          <div>
-            <Badge text="javascript" />
-            <Badge text="typescript" />
-            <Badge text="java" />
-            <Badge text="python" />
-            <Badge text="react.js" />
-            <Badge text="node.js" />
-            <Badge text="express.js" />
-            <Badge text="mongoDb" />
-            <Badge text="redis" />
-            <Badge text="kafka" />
-            <Badge text="docker" />
+          <h2 className="text-l font-semibold mb-2">skills.</h2>
+          <div className="mt-1 flex gap-2">
+            <Badge text="javascript" isHover={true} />
+            <Badge text="typescript" isHover={true} />
+            <Badge text="java" isHover={true} />
+            <Badge text="python" isHover={true} />
+            <Badge text="fastapi" isHover={true} />
+            <Badge text="react.js" isHover={true} />
+            <Badge text="node.js" isHover={true} />
+            <Badge text="express.js" isHover={true} />
+            <Badge text="prisma" isHover={true} />
+            <Badge text="mongoDb" isHover={true} />
+            <Badge text="postgreSQL" isHover={true} />
           </div>
-          <div className="mt-1">
-            <Badge text="AWS" />
-            <Badge text="NGINX" />
-            <Badge text="github actions" />
+          <div className="mt-1 flex gap-2">
+            <Badge text="firebase" isHover={true} />
+            <Badge text="redux" isHover={true} />
+            <Badge text="redis" isHover={true} />
+            <Badge text="kafka" isHover={true} />
+            <Badge text="docker" isHover={true} />
+            <Badge text="AWS" isHover={true} />
+            <Badge text="NGINX" isHover={true} />
+            <Badge text="git" isHover={true} />
+            <Badge text="github actions" isHover={true} />
           </div>
         </section>
       </main>
