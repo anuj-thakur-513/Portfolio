@@ -1,6 +1,8 @@
 import { FaLinkedin, FaTwitter, FaGithub, FaEnvelope } from "react-icons/fa";
 import Badge from "./Badge";
 import VerticalLine from "./VerticalLine";
+import { FaXTwitter } from "react-icons/fa6";
+import { ArrowUpRight } from "lucide-react";
 
 const Home = () => {
   return (
@@ -39,7 +41,7 @@ const Home = () => {
                 rel="noopener noreferrer"
                 className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-400 duration-300"
               >
-                <FaTwitter className="w-5 h-5" />
+                <FaXTwitter className="w-5 h-5" />
                 <span className="sr-only">Twitter</span>
               </a>
               <a
@@ -93,7 +95,10 @@ const Home = () => {
                   );
                 }}
               >
-                Resume <span className="group-hover:ml-1 transition-all duration-300">↗</span>
+                Resume
+                <span className="group-hover:ml-1 transition-all duration-300">
+                  <ArrowUpRight />
+                </span>
               </button>
             </div>
           </div>
@@ -188,7 +193,10 @@ const Home = () => {
                       rel="noopener noreferrer"
                       className="text-sm text-black dark:text-white hover:scale-105 duration-150"
                     >
-                      source code ↗
+                      source code
+                      <span>
+                        <ArrowUpRight />
+                      </span>
                     </a>
                   </div>
                 </div>
@@ -237,7 +245,10 @@ const Home = () => {
                       rel="noopener noreferrer"
                       className="text-sm group1 text-black dark:text-white hover:scale-105 duration-150"
                     >
-                      live preview ↗
+                      live preview
+                      <span>
+                        <ArrowUpRight />
+                      </span>
                     </a>
                     <a
                       href="https://github.com/anuj-thakur-513/password-manager"
@@ -245,7 +256,10 @@ const Home = () => {
                       rel="noopener noreferrer"
                       className="text-sm text-black dark:text-white hover:scale-105 duration-150"
                     >
-                      source code ↗
+                      source code
+                      <span>
+                        <ArrowUpRight />
+                      </span>
                     </a>
                   </div>
                 </div>
@@ -291,7 +305,10 @@ const Home = () => {
                       rel="noopener noreferrer"
                       className="text-sm text-black dark:text-white hover:scale-105 duration-150"
                     >
-                      source code ↗
+                      source code
+                      <span>
+                        <ArrowUpRight />
+                      </span>
                     </a>
                   </div>
                 </div>
