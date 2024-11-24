@@ -1,4 +1,4 @@
-import { FaLinkedin, FaTwitter, FaGithub, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import Badge from "./Badge";
 import VerticalLine from "./VerticalLine";
 import { FaXTwitter } from "react-icons/fa6";
