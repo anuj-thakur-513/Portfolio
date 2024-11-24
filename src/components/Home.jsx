@@ -87,7 +87,7 @@ const Home = () => {
                 Drop message on X
               </button>
               <button
-                className="py-2 group text-sm"
+                className="py-2 group text-sm flex items-center"
                 onClick={() => {
                   window.open(
                     "https://drive.google.com/file/d/1JmIc5tXjA9TUAZSrU-vK8mCGMCWAkMsD/view?usp=drive_link",
@@ -96,7 +96,7 @@ const Home = () => {
                 }}
               >
                 Resume
-                <span className="group-hover:ml-1 transition-all duration-300">
+                <span className="scale-90 group-hover:ml-1 transition-all duration-300">
                   <ArrowUpRight />
                 </span>
               </button>
@@ -191,10 +191,10 @@ const Home = () => {
                       href="https://github.com/anuj-thakur-513/ScaleChat"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-black dark:text-white hover:scale-105 duration-150"
+                      className="text-sm text-black flex items-center dark:text-white hover:scale-105 duration-150"
                     >
                       source code
-                      <span>
+                      <span className="scale-90">
                         <ArrowUpRight />
                       </span>
                     </a>
@@ -243,10 +243,10 @@ const Home = () => {
                       href="https://password-manager.anuj-thakur.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm group1 text-black dark:text-white hover:scale-105 duration-150"
+                      className="text-sm group1 text-black flex items-center dark:text-white hover:scale-105 duration-150"
                     >
                       live preview
-                      <span>
+                      <span className="scale-90">
                         <ArrowUpRight />
                       </span>
                     </a>
@@ -254,10 +254,10 @@ const Home = () => {
                       href="https://github.com/anuj-thakur-513/password-manager"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-black dark:text-white hover:scale-105 duration-150"
+                      className="text-sm text-black flex items-center dark:text-white hover:scale-105 duration-150"
                     >
                       source code
-                      <span>
+                      <span className="scale-90">
                         <ArrowUpRight />
                       </span>
                     </a>
@@ -303,10 +303,10 @@ const Home = () => {
                       href="https://github.com/anuj-thakur-513/deploy-nodejs-cli"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-black dark:text-white hover:scale-105 duration-150"
+                      className="text-sm text-black flex items-center dark:text-white hover:scale-105 duration-150"
                     >
                       source code
-                      <span>
+                      <span className="scale-90">
                         <ArrowUpRight />
                       </span>
                     </a>
