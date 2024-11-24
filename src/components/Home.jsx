@@ -320,7 +320,7 @@ const Home = () => {
         {/* Skills Section */}
         <section id="skills" className="mt-10">
           <h2 className="text-l font-semibold mb-2">skills.</h2>
-          <div className="mt-1 flex gap-2">
+          <div className="mt-1 flex flex-wrap gap-2">
             <Badge text="javascript" isHover={true} />
             <Badge text="typescript" isHover={true} />
             <Badge text="java" isHover={true} />
@@ -333,7 +333,7 @@ const Home = () => {
             <Badge text="mongoDb" isHover={true} />
             <Badge text="postgreSQL" isHover={true} />
           </div>
-          <div className="mt-1 flex gap-2">
+          <div className="mt-1 flex flex-wrap gap-2">
             <Badge text="firebase" isHover={true} />
             <Badge text="redux" isHover={true} />
             <Badge text="redis" isHover={true} />
