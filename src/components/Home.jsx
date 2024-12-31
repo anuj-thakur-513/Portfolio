@@ -90,7 +90,7 @@ const Home = () => {
                 className="py-2 group text-sm flex items-center"
                 onClick={() => {
                   window.open(
-                    "https://drive.google.com/file/d/1JmIc5tXjA9TUAZSrU-vK8mCGMCWAkMsD/view?usp=drive_link",
+                    "https://drive.google.com/file/d/1_CWKO6vzI3zK2hU2XJyD877xhBvNOq6r/view?usp=drive_link",
                     "_blank"
                   );
                 }}
