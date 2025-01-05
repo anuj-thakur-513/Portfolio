@@ -126,8 +126,8 @@ const Home = () => {
                   </span>
                 </div>
                 <p className="mt-2 text-sm text-black dark:text-white">
-                  Optimized Redis to resolve memory leaks, reducing storage usage from 12GB to
-                  700MB. Integrated Webengage for marketing analytics and notifications, developed a
+                  Optimized Redis to resolve memory leaks, reducing storage usage from 12GB to 2GB.
+                  Integrated Webengage for marketing analytics and notifications, developed a
                   Journey Tracer microservice to handle 10k+ test requests concurrently, and
                   implemented a Freemium functionality, boosting payments by 10%. Additionally,
                   designed and implemented a percentile prediction feature from scratch for various
