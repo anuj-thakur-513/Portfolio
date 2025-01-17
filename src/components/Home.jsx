@@ -1,7 +1,7 @@
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope, FaYoutube } from "react-icons/fa";
 import Badge from "./Badge";
 import VerticalLine from "./VerticalLine";
-import { FaXTwitter, FaYoutube } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 import { ArrowUpRight } from "lucide-react";
 
 const Home = () => {
