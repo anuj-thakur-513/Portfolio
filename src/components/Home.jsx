@@ -1,7 +1,7 @@
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import Badge from "./Badge";
 import VerticalLine from "./VerticalLine";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaXTwitter, FaYoutube } from "react-icons/fa6";
 import { ArrowUpRight } from "lucide-react";
 
 const Home = () => {
@@ -59,6 +59,13 @@ const Home = () => {
               >
                 <FaEnvelope className="w-5 h-5" />
                 <span className="sr-only">Email</span>
+              </a>
+              <a
+                href="https://www.youtube.com/@anujthakur05"
+                className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-400 duration-300"
+              >
+                <FaYoutube className="w-5 h-5" />
+                <span className="sr-only">YouTube</span>
               </a>
             </div>
           </div>
@@ -360,6 +367,7 @@ const Home = () => {
             <Badge text="NGINX" isHover={true} />
             <Badge text="git" isHover={true} />
             <Badge text="github actions" isHover={true} />
+            <Badge text="go" isHover={true} />
           </div>
         </section>
       </main>
