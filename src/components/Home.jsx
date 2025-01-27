@@ -63,7 +63,7 @@ const Home = () => {
               <a
                 href="https://www.youtube.com/@anujthakur05"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
                 className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-400 duration-300"
               >
                 <FaYoutube className="w-5 h-5" />
@@ -125,6 +125,8 @@ const Home = () => {
                     <p className="text-md font-bold">Software Engineer</p>
                     <a
                       href="https://www.mathongo.com/"
+                      target="_blank"
+                      rel="noopener"
                       className="text-xs text-black dark:text-white"
                     >
                       at <span className="underline">MathonGo</span>
@@ -153,6 +155,8 @@ const Home = () => {
                     <h5 className="font-medium">Data Analyst Intern</h5>
                     <a
                       href="https://www.scaler.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-xs text-black dark:text-white"
                     >
                       at <span className="underline">Scaler</span>
