@@ -62,6 +62,8 @@ const Home = () => {
               </a>
               <a
                 href="https://www.youtube.com/@anujthakur05"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-400 duration-300"
               >
                 <FaYoutube className="w-5 h-5" />
